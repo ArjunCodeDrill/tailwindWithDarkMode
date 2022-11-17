@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./main.css" />
+    <script
+      src="https://kit.fontawesome.com/5df3a15e37.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div
+      class="w-full h-screen dark:bg-slate-600 flex items-center justify-center"
+    >
+      <div
+        class="container w-6/12 h-48 dark:bg-slate-700 rounded-md shadow-slate-5 bg-slate-400"
+      >
+        <div class="w-full h-11 flex items-center justify-end px-10">
+          <i
+            id="toggle"
+            class="fa-solid fa-toggle-off text-2xl w-3 Class font-thin"
+          ></i>
+        </div>
+        <hr class="bg-stone-900 h-0.5 border-0" />
+        <div class="p-5">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores quasi
+          iure quae quia et magni nulla nemo blanditiis aperiam magnam? A
+          voluptatum autem aliquam tenetur iusto, beatae assumenda nam at?
+        </div>
+      </div>
+    </div>
+    <script>
+      const faToggleOff = document.getElementById("toggle");
+      const htmlTag = document.getElementsByTagName("html")[0];
+      console.log("🚀 ~ file: index.html ~ line 38 ~ htmlTag", htmlTag);
+      faToggleOff.addEventListener("click", (e) => {
+        if (faToggleOff.classList.contains("fa-toggle-off")) {
+          console.log("on");
+          faToggleOff.classList.add("fa-toggle-on");
+          htmlTag.className = "dark";
+          faToggleOff.classList.remove("fa-toggle-off");
+        } else {
+          console.log("off");
+          htmlTag.className = " ";
+          faToggleOff.classList.add("fa-toggle-off");
+          faToggleOff.classList.remove("fa-toggle-on");
+        }
+      });
+    </script>
+  </body>
+</html>
